@@ -9,8 +9,15 @@
 5. django >= 2.1.7   
 6. pytz >= 2018.9
 
+##### Docker
+```bash
+$ git clone git@github.com:glebasterbajo/InnoTest.git
+$ cd InnoTest/
+$ docker build --tag=innotest .
 
-##### Installation (Ubuntu 18.04)
+```
+
+##### Manual Installation (Ubuntu 18.04)
 * install pip
 ```bash
 $ wget https://bootstrap.pypa.io/get-pip.py

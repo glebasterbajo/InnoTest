@@ -1,0 +1,10 @@
+.idea
+.vs
+.git
+.gitignore
+
+__pycache__
+venv
+
+
+*.sqlite3
