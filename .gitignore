@@ -1,0 +1,8 @@
+.idea/
+.vs/
+
+__pycache__/
+venv/
+
+
+*.sqlite3

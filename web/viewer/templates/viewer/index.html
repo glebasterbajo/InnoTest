@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viewer</title>
+    <link rel="stylesheet" href="{% static 'viewer/style.css' %}">
+</head>
+<body>
+
+    <h1>Images</h1>
+
+    {% if images %}
+        {% for image in images %}
+            <ul>
+                <li>
+                    <p>
+                        Кадр: <b>{{ image|slice:"2:-4" }}</b>
+                        {% if image|first == "a" %}
+                            Появляется
+                        {% else %}
+                            Исчезает
+                        {% endif %}
+                    </p>
+                    {% with 'viewer/images/'|add:image as i %}
+                        <img src="{% static i %}" />
+                    {% endwith %}
+
+                </li>
+            </ul>
+        {% endfor %}
+    {% else %}
+        <p>There is no images</p>
+    {% endif %}
+
+</body>
+</html>
