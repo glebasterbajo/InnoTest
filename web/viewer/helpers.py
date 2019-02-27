@@ -1,5 +1,6 @@
 # Standard Modules
 import os
+import subprocess
 from collections import deque
 
 # Vendor Modules
@@ -11,6 +12,18 @@ from django.conf import settings
 
 
 def create_screenshots():
+    print("Creating `images` folder...", end="")
+    subprocess.run(
+        [
+            "mkdir",
+            os.path.join(
+                settings.BASE_DIR, "viewer",
+                "static", "viewer", "images"
+            )
+        ]
+    )
+    print("Done")
+    
     print("Start creating screenshots...")
     detector = ScreenSaver()
     video = cv2.VideoCapture(
