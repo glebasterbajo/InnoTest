@@ -13,8 +13,7 @@
 ```bash
 $ git clone git@github.com:glebasterbajo/InnoTest.git
 $ cd InnoTest/
-$ docker build --tag=innotest .
-
+$ docker-compose up --build
 ```
 
 ##### Manual Installation (Ubuntu 18.04)
