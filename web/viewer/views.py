@@ -14,11 +14,14 @@ def index(request):
     template = "viewer/index.html"
     context = {}
 
-    images = os.listdir(
-        os.path.join(
-            settings.BASE_DIR, "viewer", "static", "viewer", "images"
+    try:
+        images = os.listdir(
+            os.path.join(
+                settings.BASE_DIR, "viewer", "static", "viewer", "images"
+            )
         )
-    )
+    except FileNotFoundError:
+        images = []
 
     context["images"] = sorted(images, key=cut)
 
