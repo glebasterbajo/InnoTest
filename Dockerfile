@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6.3
 ENV PYTHONBUFFERED 1
 RUN mkdir InnoTest
 COPY ./2018-02-2715_03_24.ogv ./
