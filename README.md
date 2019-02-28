@@ -4,7 +4,7 @@
 
 1. python >= 3.6.3
 2. pip >= 19.0.3 
-3. opencv-python >= 3.4.0.14
+3. opencv-python >= 3.4.0.14, <4.0.0
 4. numpy >= 1.16.1   
 5. django >= 2.1.7   
 6. pytz >= 2018.9

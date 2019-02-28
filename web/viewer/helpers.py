@@ -23,7 +23,7 @@ def create_screenshots():
         ]
     )
     print("Done")
-    
+
     print("Start creating screenshots...")
     detector = ScreenSaver()
     video = cv2.VideoCapture(
